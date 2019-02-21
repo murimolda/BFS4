@@ -1,0 +1,681 @@
+@font-face {
+
+    font-family: "cambriab";
+
+    src: url('../fonts/cambriab.ttf');
+
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+/*оформление для <=1680 >1280*/
+
+body{
+	font-family: "cambriab", sans-serif;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 20px;
+	background: #292626;
+	color: #49ff00;
+
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+h1{
+	text-align: center;
+	font-size: 2.7em;
+	padding-bottom: 5px;
+}
+h2{
+	text-align: center;
+	font-size: 2.5em;
+	padding-bottom: 30px;
+}
+h3{
+	font-size: 1.5em;
+}
+h4{
+	font-size: 1.2em;
+	font-style: italic;
+	padding-top: 20px;
+}
+
+/*Верхний блок с навигацией*/
+header{
+    width: 100%;
+    position: fixed;
+	background-color:#000; 
+    z-index: 1000;
+    overflow: hidden;
+    padding: 10px 20px;
+    text-align: center;
+}
+header li{
+	margin: 5px;
+    font-size: 30px;
+}
+header a{
+	text-decoration: none;
+	text-align: center;
+	color: #49ff00;
+}
+.menu{
+	float: left;
+	width: 80%;
+	display: block;
+}
+.menu img{
+	width: 100%;
+	display: none;
+	padding: 0 10px;
+}
+.menu ul li{
+	display: inline;
+}
+.bak{
+	float: right;
+	width: 10%;
+	overflow: hidden;
+	text-align: center;
+}
+.bak ul li{
+	display: inline;
+	font-size: 20px;
+}
+.bak li{
+	margin: 5px;
+}
+.arrow{
+	float: left;
+	width: 10%;
+}
+.arrow a{
+	font-size: 70px;
+	padding: 0;
+	display: inline-block;
+}
+.arrow img{
+	height: 70px;
+	display: inline-block;
+  	vertical-align: top;
+}
+.sandwich{
+	display: none;
+}
+.hidden-menu-ticker {
+	display: none;
+}
+.btn-menu {
+	background: #000;
+	padding: 5px;
+	position: fixed;
+	top: 10px;
+	right:20px;
+	cursor: pointer;
+	z-index: 1000;
+	width: 40px;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+.btn-menu span {
+	display: block;
+	height: 5px;
+	width: 40px;
+	background-color: #49ff00;
+	margin: 7px 0 0;
+	transition: all .1s linear .23s;
+	position: relative;
+}
+.btn-menu span:first-child {
+	margin-top: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu {
+	right: 12px;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu {
+	right: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span:first-child {
+	transform: rotate(45deg);
+	top: 12px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span:nth-child(2) {
+	opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span:nth-child(3) {
+	transform: rotate(-45deg);
+	top: -12px;
+}
+.submenu{
+	display: none;
+	float: left;
+	width: 100%;
+}
+.submenu ul{
+	padding-top: 100px;
+}
+.submenu ul li{
+	text-align: center;
+	display: block;
+	padding-top: 5px;
+}
+
+ /*основной сайт*/
+
+.container{
+	margin: 0 auto;
+	width: 100%;
+}
+
+/*топ-визитка*/
+
+.top{
+	background-color: #000;
+ 	overflow: hidden;
+ 	min-height: 100vh;
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 0 40%;
+	box-shadow:-50px 10px 50px -40px rgba(0, 0, 0, 0.5);
+}
+.top_fon img:first-child{
+	display: block;
+	width: 100%;
+}
+.top_fon img:nth-child(2){
+	display: none;
+	width: 100%;
+}
+.top_fon img:nth-child(3){
+	display: none;
+	width: 100%;
+}
+.top_info{
+	text-align: center;
+	display: none;
+}
+
+
+/*инструкторы*/
+
+.instruktor{
+	min-height: 100vh;
+	padding: 150px 0;
+	overflow: hidden;
+	box-shadow:50px 50px 50px -50px rgba(0,0,0,0.4);
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 40% 0;
+}
+
+/*расположение блоков с фотографиями*/
+
+.people1, .people2, .people3{
+	overflow: hidden;
+}
+.people1 .man{
+	float: left;
+	width: 33.33%;
+}
+.people2 .man{
+	float: left;
+	width: 35%;
+}
+.people2 .man:first-child{
+	margin-left: 15%;
+}
+.people2 .man:nth-child(2){
+	margin-right: 15%;
+}
+.people3 .man{
+	float: left;
+	width: 25%;
+}
+.man{
+	padding: 30px;
+	text-align: center;
+	overflow: hidden;
+}
+.name{
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+.photo img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	padding: 5px;
+}
+
+/*Диджеи*/
+
+.dj{
+	min-height: 100vh;
+	padding: 150px 0;
+	overflow: hidden;
+	box-shadow:-50px 10px 50px -40px rgba(0, 0, 0, 0.5);
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 0 40%;
+}
+
+/*Фотографы*/
+
+.photographers{
+	padding: 150px 0;
+	overflow: hidden;
+	min-height: 100vh;
+	box-shadow:50px 50px 50px -50px rgba(0,0,0,0.4);
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 40% 0;
+}
+
+/*Программа мероприятий*/
+
+.programs{
+	padding: 150px 50px;
+	overflow: hidden;
+	min-height: 100vh;
+	box-shadow:-50px 10px 50px -40px rgba(0, 0, 0, 0.5);
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 0 40%;
+}
+.programs h2, h4{
+	color: #fff;
+}
+
+/*Семинары*/
+
+.sem{
+	padding: 150px 0;
+	overflow: hidden;
+	min-height: 100vh;
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 40% 0;
+	box-shadow:50px 50px 50px -50px rgba(0,0,0,0.4);
+}
+.day{
+	float: left;
+	width: 25%;
+	text-align: center;
+	padding: 10px;
+}
+.sem p{
+	text-align: center;
+}
+.day p{
+	padding: 10px;
+}
+.sem img{
+	width: 100%;
+}
+.sem_mobile{
+	display: none;
+}
+
+/*Места расположения*/
+
+.location{
+	overflow: hidden;
+	padding: 150px 50px;
+	min-height: 100vh;
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 0 40%;
+	box-shadow:-50px 10px 50px -40px rgba(0, 0, 0, 0.5);
+	text-align: center;
+}
+.location img{
+	width: 50%;
+	padding: 10px 50px;
+}
+.location p{
+	padding-bottom: 20px;
+	color: #fff;
+}
+.location a{
+	color: #49ff00;
+}
+.location ul{
+	padding: 10px 50px;
+	list-style-type: none;
+	color: #fff;
+}
+.location h3{
+	text-align: center;
+	padding-top: 50px;
+	font-size: 40px;
+}
+
+/*Цены*/
+
+.prices{
+	padding: 150px 0;
+	overflow: hidden;
+	min-height: 100vh;
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 40% 0;
+	box-shadow:50px 50px 50px -50px rgba(0,0,0,0.4);
+}
+.price_info{
+	color: #fff;
+	float: right;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+}
+.pas{
+	float: left;
+	width: 25%;
+	padding: 10px;
+	text-align: center;
+	overflow: hidden;
+}
+.pas h3{
+	padding-bottom: 10px;
+	font-size: 26px;
+	color: #fff;
+}
+.pas button{
+	cursor: pointer;
+	margin-top: 10px;
+	border-color: #49ff00;
+	border-radius: 2px;
+	background-color: #49ff00;
+}
+.pas button a{
+	padding: 5px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #292626;
+}
+.ticket_info{
+	padding-top: 15px;
+	font-size: 22px;
+	color: #fff;
+}
+
+/*Визы*/
+
+.visas{
+	overflow: hidden;
+	padding: 150px 70px;
+	min-height: 100vh;
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 0 40%;
+	box-shadow:-50px 10px 50px -40px rgba(0, 0, 0, 0.5);
+}
+.visas iframe{
+	padding-top: 40px;
+}
+.visas p{
+	padding-bottom: 20px;
+	color: #fff;
+}
+
+/*Достопримечательности*/
+
+.sight{
+	overflow: hidden;
+	padding: 150px 50px;
+	min-height: 100vh;
+	border-bottom: 5px solid rgba(73,255,0,0.7);
+	border-radius:0 0 40% 0;
+	box-shadow:50px 50px 50px -50px rgba(0,0,0,0.4);
+	text-align: center;
+}
+
+/*Контакты*/
+
+.contacts{
+	padding: 150px 0;
+	overflow: hidden;
+	min-height: 100vh;
+}
+.contact_info a{
+	color: #49ff00;
+}
+
+
+@media (max-width: 1280px) {
+	header li{
+	    font-size: 26px;
+	}
+	.top, .dj, .programs, .location, .visas {
+		border-radius:0 0 0 30%;
+	}
+	.instruktor, .photographers, .sem, .prices, .sight{
+		border-radius:0 0 30% 0;
+	}
+	.man{
+		padding: 20px;
+	}
+	.arrow a{
+		padding-top: 5px;
+		font-size: 50px;
+	}
+	.arrow img{
+		height: 50px;
+	}
+}
+
+@media (max-width: 1120px) {
+	body{
+		font-size: 16px;
+	}
+	header li{
+    	font-size: 20px;
+	}
+	.people3 .man{
+	width: 35%;
+	}
+	.people3 .man:first-child{
+		margin-left: 15%;
+	}
+	.people3 .man:nth-child(2){
+		margin-right: 15%;
+	}
+	.people3 .man:nth-child(3){
+		margin-left: 15%;
+	}
+	.people3 .man:nth-child(4){
+		margin-right: 15%;
+	}
+	.top, .dj, .programs, .location, .visas {
+		border-radius:0 0 0 10%;
+	}
+	.instruktor, .photographers, .sem, .prices, .sight{
+		border-radius:0 0 20% 0;
+	}
+	.top, .dj, .programs, .location, .visas,
+	 .instruktor, .photographers, .sem, .prices, .sight {
+		padding-top: 120px;
+		padding-bottom: 50px
+	}
+	.prices{
+		padding-left: 60px;
+	}
+		.pas button a{
+		font-size: 14px;
+	}
+	.top_fon img{
+		padding-top: 50px;
+	}
+	.top_fon img:first-child{
+		display: none;
+		width: 100%;
+	}
+	.top_fon img:nth-child(2){
+		display: block;
+		width: 100%;
+	}
+	.top{
+		padding:100px 0;
+		min-height: 100vh;
+	}
+}
+
+@media (max-width: 850px) {
+	header{
+		padding: 10px 5px;
+	}
+	.menu{
+		width: 60%;
+	}
+	.menu ul{
+		display: none;
+	}
+	.menu img{
+		padding-top: 10px;
+		display: block;
+	}
+	.bak{
+		width: 15%;
+		float: left;
+	}
+	.arrow{
+		width: 15%;
+	}
+	.sandwich{
+		display: block;
+		float: right;
+		width: 10%;
+	}
+	.top_fon img:nth-child(2){
+		display: none;
+		width: 100%;
+	}
+	.top_fon img:nth-child(3){
+		display: block;
+		width: 100%;
+	}
+	.top img{
+		padding-top: 10px;
+		
+	}
+	.top_info{
+		display: block;
+	}
+	.people1 .man, .people2 .man, .people3 .man{
+		width: 100%
+	}
+	.people2 .man:first-child{
+		margin-left: 0;
+	}
+	.people2 .man:nth-child(2){
+		margin-right: 0;
+	}
+	.people3 .man:first-child{
+		margin-left: 0;
+	}
+	.people3 .man:nth-child(2){
+		margin-right: 0;
+	}
+	.people3 .man:nth-child(3){
+		margin-left: 0;
+	}
+	.people3 .man:nth-child(4){
+		margin-right: 0;
+	}
+	.top, .dj, .programs, .location, .visas,
+	 .instruktor, .photographers, .sem, .prices, .sight {
+		border-radius: 0;
+	}
+	.day{
+		width: 50%;
+		padding-bottom: 40px
+	}
+	.sem_mein{
+		display: none;
+	}
+	.sem_mobile{
+		display: block;
+	}
+	.prices{
+		padding-left: 0;
+	}
+	.pas{
+		width: 50%;
+		padding-bottom: 40px
+	}
+	.location{
+		padding: 150px 10px;
+	}
+	.location img{
+		display: none;
+	}
+	.visas{
+		padding: 150px 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	.day{
+		width: 100%;
+	}
+	.pas{
+		width: 100%;
+	}
+	.visas iframe{
+		width: 100%;
+	}
+	.top_info h2{
+		font-size: 1.5em;
+	}
+}
+
+@media (max-width: 550px) {
+	body{
+		font-size: 14px;
+	}
+	.menu{
+		width: 0%;
+	}
+	.menu img{
+		display: none;
+	}
+	.arrow{
+		width: 65%;
+		text-align: left;
+		padding-left: 20px;
+	}
+	.arrow a{
+		font-size: 40px;
+	}
+	.arrow img{
+		height: 40px;
+	}
+	.bak{
+		width: 20%;
+		text-align: right;
+	}
+	.sandwich{
+		width: 15%;
+	}
+}
+
+@media (max-width: 500px) {
+	.arrow{
+		width: 50%;
+	}
+	.bak{
+		width: 30%;
+	}
+	.sandwich{
+		width: 20%;
+	}
+	.submenu ul{
+		padding-top: 30px;
+	}
+}
+
+
+
+
+
